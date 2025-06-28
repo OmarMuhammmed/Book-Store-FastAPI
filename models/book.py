@@ -12,6 +12,6 @@ class Book(Base):
     description = Column(String)
 
     author_id = Column(Integer, ForeignKey('authors.id'))
-    auhtor = relationship('Author', back_populates='')
+    author = relationship('Author', back_populates='books')
 
     reviews = relationship("Review", back_populates='book')
