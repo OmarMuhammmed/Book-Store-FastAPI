@@ -16,4 +16,7 @@ class BookResponseSchema(BookBaseSchema):
     author_id: Optional[int]
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+
+class BookUpdateSchema(BookBaseSchema):
+    title: Optional[str]
